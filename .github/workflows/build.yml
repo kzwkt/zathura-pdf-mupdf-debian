@@ -14,7 +14,7 @@ jobs:
             echo "deb-src https://deb.debian.org/debian stable main" |  tee -a /etc/apt/sources.list
             apt update
             apt build-dep zathura mupdf -y
-            apt install wget libmupdf-dev zathura-dev neofetch -y
+            apt install wget libmupdf-dev zathura-dev build-essential devscripts -y
             wget https://github.com/pwmt/zathura-pdf-mupdf/archive/refs/tags/0.4.1.tar.gz
             tar -xzf 0.4.1.tar.gz
             cd zathura-pdf-mupdf-0.4.1/

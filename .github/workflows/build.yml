@@ -15,13 +15,10 @@ jobs:
             apt update
             apt build-dep zathura mupdf -y
             apt install wget libmupdf-dev zathura-dev build-essential devscripts -y
+            cd /tmp
             wget https://github.com/pwmt/zathura-pdf-mupdf/archive/refs/tags/0.4.1.tar.gz
             tar -xzf 0.4.1.tar.gz
             cd zathura-pdf-mupdf-0.4.1/
-            chown -R _apt:root /var/cache/apt/archives
-            chown -R _apt:root /var/lib/apt/lists
-            chmod -R 755 /var/cache/apt/archives
-            chmod -R 755 /var/lib/apt/lists
             apt-get source mupdf
             sed -i -e '/^[[:space:]]*tesseract/s/^[[:space:]]*\(tesseract\)/# \1/' -e '/^[[:space:]]*leptonica/s/^[[:space:]]*\(leptonica\)/# \1/' meson.build
             cd build

@@ -13,7 +13,7 @@ jobs:
             apt-get update && apt-get install -y ca-certificates
             echo "deb-src https://deb.debian.org/debian stable main" |  tee -a /etc/apt/sources.list
             apt update
-            apt build-dep zathura mupdf
+            apt build-dep zathura mupdf -y
             apt install wget libmupdf-dev zathura-dev neofetch -y
             wget https://github.com/pwmt/zathura-pdf-mupdf/archive/refs/tags/0.4.1.tar.gz
             tar -xzf 0.4.1.tar.gz

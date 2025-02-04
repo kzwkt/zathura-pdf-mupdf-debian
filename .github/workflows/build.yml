@@ -14,14 +14,35 @@ jobs:
             echo "deb-src https://deb.debian.org/debian stable main" |  tee -a /etc/apt/sources.list
             apt update
             apt build-dep zathura mupdf -y
-            apt install wget libmupdf-dev zathura-dev build-essential devscripts -y
-            cd /tmp
+            apt install wget libmupdf-dev zathura-dev gcc meson  -y
             wget https://github.com/pwmt/zathura-pdf-mupdf/archive/refs/tags/0.4.1.tar.gz
             tar -xzf 0.4.1.tar.gz
             cd zathura-pdf-mupdf-0.4.1/
             apt-get source mupdf
             sed -i -e '/^[[:space:]]*tesseract/s/^[[:space:]]*\(tesseract\)/# \1/' -e '/^[[:space:]]*leptonica/s/^[[:space:]]*\(leptonica\)/# \1/' meson.build
+            meson setup build
             cd build
             ninja
+            upload=$(realpath libpdf-mupdf.so)
+            echo "FILES=${upload}" >> $GITHUB_ENV
+
+      - name: Set dynamic tag version
+        run: |
+          # Generate a dynamic tag using commit SHA or other unique identifier
+          VERSION="v$(date +'%Y%m%d%H%M%S')"  # Format: vYYYYMMDDHHMMSS
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.VERSION }}
+          name: "Release ${{ env.VERSION }}"
+          body: "This release includes the possible build for zathura-pdf-mupdf for debian stable."
+          files: |
+            ${{ env.FILES }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+             
+            
+            
             
 

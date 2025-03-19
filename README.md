@@ -11,7 +11,7 @@ https://github.com/pwmt/zathura-pdf-mupdf/tags
 | 0.4.4      | (>= 0.2.0)       | (>= 1.24.0)      | (>= 0.61)        |     
 | 0.4.3      | (>= 0.2.0)       | (>= 1.24.0)      | (>= 0.61)        |     
 | 0.4.2      | (>= 0.2.0)       | (>= 1.24.0)      | (>= 0.61)        |   
-| 0.4.1      | (>= 0.4.7)       | (>= 1.16.0)      | (>= 0.61)        | 
+| 0.4.1      | (>= 0.2.0)       | (>= 1.16.0)      | (>= 0.61)        | 
 
 https://tracker.debian.org/pkg/zathura
 https://tracker.debian.org/pkg/mupdf

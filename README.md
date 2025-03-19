@@ -44,7 +44,7 @@ https://github.com/pwmt/zathura-pdf-mupdf/tree/0.4.4 etc
 # use it 
 ```
 sudo  apt install libjbig2dec0 libgumbo1
-https://github.com/kzwkt/zathura-pdf-mupdf-debian/releases
+wget https://github.com/kzwkt/zathura-pdf-mupdf-debian/releases/download/zathura-pdf-mupdf/libpdf-mupdf.so
 mkdir -p ~/.local/lib/zathura
 mv ~/Downloads/libpdf-mupdf.so ~/.local/lib/zathura
 

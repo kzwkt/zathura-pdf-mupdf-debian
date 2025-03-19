@@ -1,3 +1,5 @@
+apt update 
+apt install -y ca-certificates  
 echo "deb-src https://deb.debian.org/debian stable main" |  tee -a /etc/apt/sources.list
 apt update
 apt build-dep zathura mupdf -y

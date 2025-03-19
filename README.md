@@ -18,12 +18,11 @@ https://tracker.debian.org/pkg/mupdf
 https://tracker.debian.org/pkg/girara
 https://tracker.debian.org/pkg/meson
 
-|  Suite       | Zathura         | MuPDF            | Meson           | Girara          |
-|--------------|-----------------|------------------|-----------------|-----------------|
-| **Stable**   | 0.5.2-1         | 1.21.1+ds2-1     | 1.0.1-5         | 0.4.0-1         |
-| **Testing**  | 0.5.8-1         | 1.24.10+ds1-1    | 1.6.0-1         | 0.4.4-1         |
-| **Unstable** | 0.5.10-1        | 1.25.1+ds1-5     | 1.6.0-1         | 0.4.5-1         |
-
+|  Suite   | Zathura    | MuPDF         | Meson    | Girara   |
+|----------|------------|---------------|----------|----------|
+| Stable   | 0.5.2-1    | 1.21.1+ds2-1  | 1.0.1-5  | 0.4.0-1  |
+| Testing  | 0.5.8-1    | 1.24.10+ds1-1 | 1.6.0-1  | 0.4.4-1  |
+| Unstable | 0.5.10-1   | 1.25.1+ds1-5  | 1.6.0-1  | 0.4.5-1  |
 
 
 we can go with zathura-pdf-mupdf 0.4.1 due to mupdf version dep

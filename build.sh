@@ -14,4 +14,4 @@ sed -i -e '/^[[:space:]]*tesseract/s/^[[:space:]]*\(tesseract\)/# \1/' -e '/^[[:
 meson setup build
 cd build
 ninja
-strip build/libpdf-mupdf.so
+strip libpdf-mupdf.so

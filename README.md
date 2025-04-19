@@ -53,13 +53,17 @@ zathura -p ~/.local/lib/zathura/ "$@"
 
 
 
-copy it to zathura plugin dir  /usr/lib/x86_64-linux-gnu/zathura/
+if you copy it to zathura plugin dir  /usr/lib/x86_64-linux-gnu/zathura/
 
 sudo install -m 755 -o root -g root  libpdf-mupdf.so /usr/lib/x86_64-linux-gnu/zathura/
 zathura
 error: Could not load plugin '/usr/lib/x86_64-linux-gnu/zathura/libpdf-mupdf.so' (/usr/lib/x86_64-linux-gnu/zathura/libpdf-mupdf.so: cannot open shared object file: Permission denied).
 zatura 
 error: plugin: filetype already registered: application/pdf
-need to remove /usr/lib/x86_64-linux-gnu/zathura/libpdf-poppler.so to avoid conflict 
+need to remove /usr/lib/x86_64-linux-gnu/zathura/libpdf-poppler.so to avoid conflict
+
+so install dummy package
+https://github.com/kzwkt/debian-faker/releases/download/zathura-pdf-poppler/zathura-pdf-poppler_99.9.9_all.deb
+
 ```
 

@@ -12,9 +12,7 @@ cd zathura-pdf-mupdf-$version/
 apt-get source mupdf
 sed -i -e '/^[[:space:]]*tesseract/s/^[[:space:]]*\(tesseract\)/# \1/' -e '/^[[:space:]]*leptonica/s/^[[:space:]]*\(leptonica\)/# \1/' meson.build
 sed -i "s/^[[:space:]]*dependency('mupdf-third')/# &/" meson.build
-meson setup build \
-  -Dmupdf-lib-dir=../mupdf/build/release \
-  -Dmupdf-include-dir=../mupdf/include
+meson setup build 
 cd build
 ninja
 strip libpdf-mupdf.so

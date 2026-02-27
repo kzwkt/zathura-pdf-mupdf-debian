@@ -27,11 +27,11 @@ https://tracker.debian.org/pkg/meson
 
 
 
-we can go with zathura-pdf-mupdf 0.4.1 due to mupdf version dep
+we can go with zathura-pdf-mupdf 0.4.4 due to mupdf version dep
 
 we could build newer version with new mupdf-third but it could have new dependecies 
 
-https://github.com/pwmt/zathura-pdf-mupdf/archive/refs/tags/0.4.1.tar.gz
+https://github.com/pwmt/zathura-pdf-mupdf/archive/refs/tags/0.4.4.tar.gz
 
 
 

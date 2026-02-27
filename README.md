@@ -6,23 +6,25 @@ mupdf plugin for zathura on debian stable
 
 https://github.com/pwmt/zathura-pdf-mupdf/tags
 
-| Plugin Ver | Zathura          | MuPDF            | Meson            | 
-|------------|------------------|------------------|------------------|
-| 0.4.4      | (>= 0.2.0)       | (>= 1.24.0)      | (>= 0.61)        |     
-| 0.4.3      | (>= 0.2.0)       | (>= 1.24.0)      | (>= 0.61)        |     
-| 0.4.2      | (>= 0.2.0)       | (>= 1.24.0)      | (>= 0.61)        |   
-| 0.4.1      | (>= 0.2.0)       | (>= 1.16.0)      | (>= 0.61)        | 
+Plugin Ver	Zathura	MuPDF	Meson
+2026.02.03	(>= 0.5.8 or >= 2026.01.*)†	(>= 1.26)**	(>= 0.61)**
+0.4.6	(>= 0.5.6)†	(>= 1.26)	(>= 0.61)
+0.4.4	(>= 0.5.2)†	(>= 1.24)	(>= 0.61)
+0.4.3	(>= 0.5.1)†	(>= 1.24)	(>= 0.61)
+0.4.2	(>= 0.5.0)†	(>= 1.24)	(>= 0.61)
+0.4.1	(>= 0.5.0)†	(>= 1.16)	(>= 0.61)
 
 https://tracker.debian.org/pkg/zathura
 https://tracker.debian.org/pkg/mupdf
 https://tracker.debian.org/pkg/girara
 https://tracker.debian.org/pkg/meson
 
-|  Suite   | Zathura    | MuPDF         | Meson    | Girara   |
-|----------|------------|---------------|----------|----------|
-| Stable   | 0.5.2-1    | 1.21.1+ds2-1  | 1.0.1-5  | 0.4.0-1  |
-| Testing  | 0.5.8-1    | 1.24.10+ds1-1 | 1.6.0-1  | 0.4.4-1  |
-| Unstable | 0.5.10-1   | 1.25.1+ds1-5  | 1.6.0-1  | 0.4.5-1  |
+| **Suite**    | **Zathura**  | **MuPDF**    | **Meson** | **Girara** |
+| ------------ | ------------ | ------------ | --------- | ---------- |
+| **Stable**   | 0.5.11-1     | 1.25.1+ds1-6 | 1.4.0-2   | 0.4.5-1    |
+| **Testing**  | 2026.02.22-1 | 1.27.0+ds1-3 | 1.4.0-2   | 0.4.5-1    |
+| **Unstable** | 2026.02.22-1 | 1.27.0+ds1-3 | 1.4.0-2   | 0.4.5-1    |
+
 
 
 we can go with zathura-pdf-mupdf 0.4.1 due to mupdf version dep

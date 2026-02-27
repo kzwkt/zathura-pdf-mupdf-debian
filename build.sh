@@ -6,15 +6,12 @@ apt build-dep zathura mupdf -y
 apt install wget libmupdf-dev zathura-dev gcc meson ca-certificates binutils  -y
 version=0.4.4
 echo $version > version 
-git clone --recursive https://github.com/ArtifexSoftware/mupdf.git
-cd mupdf
-make build=release
-cd ..
 wget https://github.com/pwmt/zathura-pdf-mupdf/archive/refs/tags/$version.tar.gz
 tar -xzf $version.tar.gz
 cd zathura-pdf-mupdf-$version/
 apt-get source mupdf
 sed -i -e '/^[[:space:]]*tesseract/s/^[[:space:]]*\(tesseract\)/# \1/' -e '/^[[:space:]]*leptonica/s/^[[:space:]]*\(leptonica\)/# \1/' meson.build
+sed -i "s/^[[:space:]]*dependency('mupdf-third')/# &/" meson.build
 meson setup build \
   -Dmupdf-lib-dir=../mupdf/build/release \
   -Dmupdf-include-dir=../mupdf/include

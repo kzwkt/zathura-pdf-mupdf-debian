@@ -4,7 +4,7 @@ echo "deb-src https://deb.debian.org/debian stable main" |  tee -a /etc/apt/sour
 apt update
 apt build-dep zathura mupdf -y
 apt install wget libmupdf-dev zathura-dev gcc meson ca-certificates binutils  -y
-version=0.4.1
+version=0.4.4
 echo $version > version 
 wget https://github.com/pwmt/zathura-pdf-mupdf/archive/refs/tags/$version.tar.gz
 tar -xzf $version.tar.gz
